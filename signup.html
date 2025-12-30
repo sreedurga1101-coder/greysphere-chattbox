@@ -22,7 +22,7 @@
 
       <h3 class="text-center mb-4">Create Account</h3>
 
-      <form onsubmit="return goToSignin()">
+      <form onsubmit="return registerUser()">
 
         <!-- Name -->
         <div class="mb-3 input-group">
@@ -63,10 +63,13 @@
     </div>
   </div>
 <script>
-function goToSignin() {
+function registerUser() {
+  alert("Registration successful (demo)");
   window.location.href = "signin.html";
   return false;
 }
 </script>
+
 </body>
 </html>
+
