@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>GreySphere ChatBox</title>
 <div class="logout-bar">
-  <a href="/member/logout" class="logout-btn">Logout</a>
+  <a href="signin.html" class="logout-btn">Logout</a>
 </div>
 
   <!-- Bootstrap -->
@@ -18,7 +18,7 @@
     rel="stylesheet">
 
   <!-- Your existing theme -->
-  <link rel="stylesheet" href="/assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 
@@ -46,11 +46,7 @@
           Share something
         </h5>
 
-        <form
-          id="postForm"
-          action="/wall/add"
-          method="POST"
-          enctype="multipart/form-data">
+       <form id="postForm" onsubmit="return false;">
 
           <textarea
             class="form-control mb-3"
@@ -80,6 +76,6 @@
   </div>
 
   <!-- JS -->
-  <script src="/assets/js/wall.js"></script>
+  <script src="assets/js/wall.js"></script>
 </body>
 </html>
