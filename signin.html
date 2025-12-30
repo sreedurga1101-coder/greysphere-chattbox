@@ -24,7 +24,7 @@
       <i class="bi bi-shield-lock"></i> Member Login
     </h3>
 
-    <form action="/member/signin" method="POST">
+   <form onsubmit="return goToWall()">
 
       <!-- Email -->
       <div class="input-group mb-3">
@@ -64,4 +64,12 @@
 </div>
 
 </body>
+  <script>
+function goToWall() {
+  window.location.href = "wall.htm";
+  return false;
+}
+</script>
+
 </html>
+
