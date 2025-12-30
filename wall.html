@@ -46,7 +46,7 @@
           Share something
         </h5>
 
-       <form id="postForm" onsubmit="return false;">
+       <form id="postForm" onsubmit="addPost(); return false;">
 
           <textarea
             class="form-control mb-3"
@@ -78,12 +78,29 @@
   <!-- JS -->
   <script src="assets/js/wall.js"></script>
   <script>
-document.getElementById("postForm").onsubmit = function () {
-  alert("Post submitted (demo)");
-  return false;
-};
+function addPost() {
+  const textarea = document.querySelector("textarea");
+  const text = textarea.value.trim();
+
+  if (!text) return;
+
+  const post = document.createElement("div");
+  post.className = "card shadow-sm mb-3";
+  post.innerHTML = `
+    <div class="card-body">
+      <p>${text}</p>
+    </div>
+  `;
+
+  document.getElementById("wall").prepend(post);
+  textarea.value = "";
+}
 </script>
+
+
+  
 
 </body>
 </html>
+
 
